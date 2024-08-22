@@ -1,0 +1,71 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  align-items: center;
+  padding: 10px 2px;
+  /* box-shadow: 0px 2px 2px 0px rgb(180, 178, 178); */
+  padding: 10px 5%;
+}
+
+.ulNavBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 60px;
+  list-style: none;
+  font-size: medium;
+}
+.ulmenu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  list-style: none;
+  font-size: medium;
+  background-color: rgb(230, 230, 230);
+  padding: 10px;
+  transform: translateX(-150%);
+  transition: 0.5s all;
+  z-index: 10;
+  height: 75vh;
+}
+.active {
+  transform: translateX(0%);
+  display: none;
+}
+.ulNavBar li a,
+.ulmenu li a {
+  text-decoration: none;
+  color: black;
+}
+.ulNavBar .home a,
+.ulmenu .home a {
+  color: orangered;
+}
+.ulmenu li {
+  border-bottom: solid 1px rgb(214, 214, 214);
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.NavBar .menu {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .ulNavBar {
+    display: none;
+  }
+
+  .NavBar .menu {
+    display: block;
+    cursor: pointer;
+  }
+  .active {
+    display: flex;
+  }
+}
